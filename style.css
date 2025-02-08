@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    background: linear-gradient(45deg, #2c3e50, #34495e); /* Dark gradient background */
+    color: white;
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -12,7 +13,7 @@ body {
 }
 
 h1 {
-    color: white;
+    color: #ecf0f1;  /* Lighter color for heading */
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -28,7 +29,8 @@ button {
     padding: 20px;
     font-size: 1.2rem;
     border: none;
-    background: white;
+    background: #34495e; /* Dark background for buttons */
+    color: #ecf0f1;  /* Light text color */
     cursor: pointer;
     transition: 0.3s ease-in-out;
     border-radius: 8px;
@@ -39,11 +41,12 @@ button {
     align-items: center;
     text-align: center;
     box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for a subtle effect */
 }
 
 button:hover {
-    background: #ff6f61;
+    background: #1abc9c; /* Lighter color on hover */
     color: white;
     transform: scale(1.1);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4); /* Darker shadow on hover */
 }
