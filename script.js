@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "C", name: "Countdown Timer", link: "countdown-timer.html" },
         { letter: "D", name: "Digital Clock", link: "digital-clock.html" },
         { letter: "E", name: "Expense Tracker", link: "expense-tracker.html" },
-        { letter: "F", name: "Flashcard Quiz", link: "flashcard-quiz.html" },
+        { letter: "F", name: "Face Mash", link: " https://android-013.github.io/Elo-Poll/" },
         { letter: "G", name: "Guess the Number Game", link: "guess-number.html" },
         { letter: "H", name: "Horoscope Finder", link: "horoscope.html" },
         { letter: "I", name: "Image Gallery", link: "image-gallery.html" },
