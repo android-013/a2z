@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #clock {
+            display: flex;
+            font-size: 3rem;
+            padding: 20px;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .time-part {
+            margin: 0 5px;
+        }
+        #modeButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #fff;
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div id="clock">
+        <span class="time-part" id="hours">00</span>:
+        <span class="time-part" id="minutes">00</span>:
+        <span class="time-part" id="seconds">00</span>.
+        <span class="time-part" id="milliseconds">000</span>
+    </div>
+    <button id="modeButton">Switch to 12-hour format</button>
+    <script>
+        let is24Hour = true;
+        
+        function updateClock() {
+            const now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            let milliseconds = now.getMilliseconds().toString().padStart(3, '0');
+            
+            if (!is24Hour) {
+                let period = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12 || 12;
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+                document.getElementById('clock').setAttribute('data-period', period);
+            } else {
+                document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            }
+            
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+            document.getElementById('milliseconds').innerText = milliseconds;
+        }
+        
+        document.getElementById('modeButton').addEventListener('click', function() {
+            is24Hour = !is24Hour;
+            this.innerText = is24Hour ? 'Switch to 12-hour format' : 'Switch to 24-hour format';
+            updateClock();
+        });
+        
+        setInterval(updateClock, 10);
+        updateClock();
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "A", name: "Age Calculator", link: "a/index.html" },
         { letter: "B", name: "Body Calculator", link: "blog-homepage.html" },
         { letter: "C", name: "Card Matching Game", link: " https://android-013.github.io/Card-Game-Front/" },
-        { letter: "D", name: "Digital Clock", link: "digital-clock.html" },
+        { letter: "D", name: "Digital Clock", link: "d.html" },
         { letter: "E", name: "Expense Tracker", link: "expense-tracker.html" },
         { letter: "F", name: "Face Mash", link: " https://android-013.github.io/Elo-Poll/" },
         { letter: "G", name: "Guess the Number Game", link: "guess-number.html" },
