@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "O", name: "Online Polling System", link: "polling.html" },
         { letter: "P", name: "Password Generator", link: "password.html" },
         { letter: "Q", name: "Quiz App", link: "quiz.html" },
-        { letter: "R", name: "Recipe Finder", link: "recipe.html" },
+        { letter: "R", name: "Rock Paper Secissor Game", link: "https://android-013.github.io/rps-front/" },
         { letter: "S", name: "Stopwatch", link: "stopwatch.html" },
         { letter: "T", name: "To-Do List App", link: "todo.html" },
         { letter: "U", name: "URL Shortener UI", link: "url-shortener.html" },
