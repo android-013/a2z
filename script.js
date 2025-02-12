@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = [
-        { letter: "A", name: "Age Calculator", link: "a/index.html" },
+        { letter: "A", name: "Ages Calculator", link: "a/index.html" },
         { letter: "B", name: "Body Calculator", link: "blog-homepage.html" },
         { letter: "C", name: "Card Matching Game", link: " https://android-013.github.io/Card-Game-Front/" },
         { letter: "D", name: "Digital Clock", link: "d.html" },
