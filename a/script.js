@@ -1,25 +1,64 @@
-function calculateAge() {
-    let birthdate = document.getElementById('birthdate').value;
-    if (!birthdate) {
-        document.getElementById('result').innerText = "Please select a birthdate.";
-        return;
+const calendarEl = document.getElementById("calendar");
+const currentMonthYear = document.getElementById("current-month-year");
+const currentYearEl = document.getElementById("current-year");
+const dateInfo = document.getElementById("date-info");
+let currentDate = new Date();
+
+function renderCalendar() {
+    calendarEl.innerHTML = "";
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth();
+    currentMonthYear.textContent = `${currentDate.toLocaleString('default', { month: 'long' })}`;
+    currentYearEl.textContent = year;
+
+    const firstDay = new Date(year, month, 1).getDay();
+    const lastDate = new Date(year, month + 1, 0).getDate();
+
+    for (let i = 0; i < firstDay; i++) {
+        const emptyCell = document.createElement("div");
+        calendarEl.appendChild(emptyCell);
     }
-    
-    let birthDate = new Date(birthdate);
-    let today = new Date();
-    
-    let years = today.getFullYear() - birthDate.getFullYear();
-    let months = today.getMonth() - birthDate.getMonth();
-    let days = today.getDate() - birthDate.getDate();
-    
-    if (days < 0) {
-        months--;
-        days += new Date(today.getFullYear(), today.getMonth(), 0).getDate();
+
+    for (let i = 1; i <= lastDate; i++) {
+        const dateCell = document.createElement("div");
+        dateCell.textContent = i;
+        dateCell.addEventListener("click", () => calculateDays(year, month, i));
+        calendarEl.appendChild(dateCell);
     }
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
-    
-    document.getElementById('result').innerText = `You are ${years} years, ${months} months, and ${days} days old.`;
 }
+
+function calculateDays(year, month, day) {
+    const selectedDate = new Date(year, month, day);
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const diffTime = selectedDate - today;
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays > 0) {
+        dateInfo.textContent = `${diffDays} days to come`;
+    } else if (diffDays < 0) {
+        dateInfo.textContent = `${Math.abs(diffDays)} days have passed`;
+    } else {
+        dateInfo.textContent = "Today!";
+    }
+}
+
+document.getElementById("prev-month").addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+});
+document.getElementById("next-month").addEventListener("click", () => {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+});
+document.getElementById("prev-year").addEventListener("click", () => {
+    currentDate.setFullYear(currentDate.getFullYear() - 1);
+    renderCalendar();
+});
+document.getElementById("next-year").addEventListener("click", () => {
+    currentDate.setFullYear(currentDate.getFullYear() + 1);
+    renderCalendar();
+});
+
+renderCalendar();
