@@ -40,6 +40,23 @@ function rotorStepReverse(char, rotor, position) {
     return String.fromCharCode((rotorIndex - position + 26) % 26 + 65);
 }
 
+// Function to display the text with animation
+function animateText(text) {
+    const resultTextArea = document.getElementById('resultText');
+    resultTextArea.value = ''; // Clear previous text
+    let i = 0;
+
+    function typeCharacter() {
+        if (i < text.length) {
+            resultTextArea.value += text.charAt(i);
+            i++;
+            setTimeout(typeCharacter, 10); // Delay of 10ms per character
+        }
+    }
+
+    typeCharacter();
+}
+
 function processText(action) {
     const inputText = document.getElementById('inputText').value;
     let rotorPositions = [0, 0, 0]; // Initial rotor positions, could be set dynamically
@@ -51,5 +68,5 @@ function processText(action) {
         outputText = enigmaEncoder(inputText, rotorPositions); // Same function for decryption
     }
     
-    document.getElementById('resultText').value = outputText;
+    animateText(outputText); // Animate the output text
 }
