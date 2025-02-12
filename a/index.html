@@ -23,12 +23,19 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
             text-align: center;
-        }
-        .header {
             display: flex;
-            justify-content: space-between;
+            gap: 20px;
+        }
+        .year-control, .month-control {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 10px;
+            gap: 10px;
+        }
+        .calendar-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         button {
             background: rgba(255, 255, 255, 0.2);
@@ -45,6 +52,7 @@
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 5px;
+            margin-top: 10px;
         }
         .calendar div {
             padding: 10px;
@@ -66,19 +74,26 @@
 </head>
 <body>
     <div class="calendar-container">
-        <div class="header">
-            <button id="prev-year">&#9664;&#9664;</button>
-            <button id="prev-month">&#9664;</button>
-            <span id="current-month-year"></span>
-            <button id="next-month">&#9654;</button>
-            <button id="next-year">&#9654;&#9654;</button>
+        <div class="year-control">
+            <span id="current-year"></span>
+            <button id="prev-year">&#9664; Previous Year</button>
+            <button id="next-year">Next Year &#9654;</button>
         </div>
-        <div class="calendar" id="calendar"></div>
-        <p id="date-info"></p>
+        <div class="calendar-wrapper">
+            <span id="current-month-year"></span>
+            <div class="calendar" id="calendar"></div>
+            <p id="date-info"></p>
+        </div>
+        <div class="month-control">
+            <span>Month</span>
+            <button id="prev-month">&#9664; Previous Month</button>
+            <button id="next-month">Next Month &#9654;</button>
+        </div>
     </div>
     <script>
         const calendarEl = document.getElementById("calendar");
         const currentMonthYear = document.getElementById("current-month-year");
+        const currentYearEl = document.getElementById("current-year");
         const dateInfo = document.getElementById("date-info");
         let currentDate = new Date();
 
@@ -86,7 +101,8 @@
             calendarEl.innerHTML = "";
             const year = currentDate.getFullYear();
             const month = currentDate.getMonth();
-            currentMonthYear.textContent = `${currentDate.toLocaleString('default', { month: 'long' })} ${year}`;
+            currentMonthYear.textContent = `${currentDate.toLocaleString('default', { month: 'long' })}`;
+            currentYearEl.textContent = year;
 
             const firstDay = new Date(year, month, 1).getDay();
             const lastDate = new Date(year, month + 1, 0).getDate();
