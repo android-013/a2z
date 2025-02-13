@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const projects = [
         { letter: "A", name: "Ages Calculator", link: "a/index.html" },
-        { letter: "B", name: "Bad UI", link: "blog-homepage.html" },
+        { letter: "B", name: "Bad UI, Worse UX", link: "https://android-013.github.io/bad-ui/" },
         { letter: "C", name: "Card Matching Game", link: " https://android-013.github.io/Card-Game-Front/" },
         { letter: "D", name: "Digital Clock", link: "d.html" },
         { letter: "E", name: "Enigma Machine", link: "e/index.html" },
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "R", name: "Rock Paper Secissor Game", link: "https://android-013.github.io/rps-front/" },
         { letter: "S", name: "Slot Machine", link: " https://android-013.github.io/Slot-machine-front/" },
         { letter: "T", name: "Two hand RPS", link: "todo.html" },
-        { letter: "U", name: "URL Shortener API", link: "url-shortener.html" },
-        { letter: "V", name: "Voting System", link: "https://android-013.github.io/Elo-Poll/" },
+        //{ letter: "U", name: "URL Shortener API", link: "url-shortener.html" },
+        //{ letter: "V", name: "Voting System", link: "https://android-013.github.io/Elo-Poll/" },
         //{ letter: "W", name: "Weather API", link: "weather.html" },
         //{ letter: "X", name: "Xylophone Web App", link: "xylophone.html" },
         //{ letter: "Y", name: "YouTube API", link: "youtube-search.html" },
