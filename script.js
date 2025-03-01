@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "S", name: "Slot Machine", link: " https://android-013.github.io/Slot-machine-front/" },
         { letter: "T", name: "Tic Tac Toe", link: "https://android-013.github.io/Tic-Tac-Toe/" },
         //{ letter: "U", name: "URL Shortener API", link: "url-shortener.html" },
-        //{ letter: "V", name: "Voting System", link: "https://android-013.github.io/Elo-Poll/" },
+        { letter: "V", name: "Voting System", link: "https://android-013.github.io/Elo-Poll/" },
         //{ letter: "W", name: "Weather API", link: "weather.html" },
         //{ letter: "X", name: "Xylophone Web App", link: "xylophone.html" },
         //{ letter: "Y", name: "YouTube API", link: "youtube-search.html" },
