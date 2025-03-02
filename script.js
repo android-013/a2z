@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "D", name: "Digital Bangla Clock", link: "https://android-013.github.io/digital-bangla-grid-segment-clock/"},
         { letter: "E", name: "Enigma Machine", link: "e/index.html" },
         { letter: "F", name: "Five Way (Star trek) RPS", link: "https://android-013.github.io/5-way-rps/" },
-        //{ letter: "G", name: "Guess the Number Game", link: "guess-number.html" },
+        { letter: "G", name: "Google Sheet Viewer", link: "https://android-013.github.io/sheet/" },
         //{ letter: "H", name: "Horoscope Finder", link: "horoscope.html" },
         //{ letter: "I", name: "Image Gallery", link: "image-gallery.html" },
         //{ letter: "J", name: "JavaScript Calculator", link: "calculator.html" },
