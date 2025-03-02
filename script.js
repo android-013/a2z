@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //{ letter: "J", name: "JavaScript Calculator", link: "calculator.html" },
         //{ letter: "K", name: "Keyboard Event Tester", link: "keyboard-tester.html" },
         //{ letter: "L", name: "Loan EMI Calculator", link: "loan-calculator.html" },
-        //{ letter: "M", name: "Movie Search API", link: "markdown.html" },
+        { letter: "M", name: "Math quiz calculator", link: "https://android-013.github.io/Math-Quiz-Front/" },
         //{ letter: "N", name: "Notes App", link: "notes.html" },
         //{ letter: "O", name: "Online Polling System", link: "polling.html" },
         { letter: "P", name: "Password Generator", link: "password.html" },
