@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "M", name: "Math quiz calculator", link: "https://android-013.github.io/Math-Quiz-Front/" },
         //{ letter: "N", name: "Notes App", link: "notes.html" },
         //{ letter: "O", name: "Online Polling System", link: "polling.html" },
-        { letter: "P", name: "Password Generator", link: "password.html" },
+        { letter: "P", name: "Password Generator", link: "p/pasword.html" },
         //{ letter: "Q", name: "Quiz App", link: "quiz.html" },
         { letter: "R", name: "Rock Paper Secissor Game", link: "https://android-013.github.io/rps-front/" },
         { letter: "S", name: "Slot Machine", link: " https://android-013.github.io/Slot-machine-front/" },
