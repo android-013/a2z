@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //{ letter: "I", name: "Image Gallery", link: "image-gallery.html" },
         //{ letter: "J", name: "JavaScript Calculator", link: "calculator.html" },
         //{ letter: "K", name: "Keyboard Event Tester", link: "keyboard-tester.html" },
-        //{ letter: "L", name: "Loan EMI Calculator", link: "loan-calculator.html" },
+        { letter: "L", name: "Loan EMI Calculator", link: "l/index.html" },
         { letter: "M", name: "Math quiz calculator", link: "https://android-013.github.io/Math-Quiz-Front/" },
         //{ letter: "N", name: "Notes App", link: "notes.html" },
         //{ letter: "O", name: "Online Polling System", link: "polling.html" },
