@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "V", name: "Voting System", link: "https://android-013.github.io/Elo-Poll/" },
         //{ letter: "W", name: "Weather API", link: "weather.html" },
         //{ letter: "X", name: "Xylophone Web App", link: "xylophone.html" },
-        //{ letter: "Y", name: "YouTube API", link: "youtube-search.html" },
+        //{ letter: "Y", name: "YouTube Live", link: "youtube-search.html" },
         //{ letter: "Z", name: "Zoom Image on Hover", link: "zoom.html" }
     ];
 
