@@ -12,6 +12,9 @@ document.getElementById("findSign").addEventListener("click", function () {
 
 document.getElementById("showHoroscope").addEventListener("click", function () {
     document.getElementById("loadingPopup").style.display = "block";
+    
+    const loadingBar = document.getElementById("loadingBar");
+    const loadingText = document.getElementById("loadingText");
     const messages = [
         "Scanning Jupiter weather...",
         "Scanning Saturn's rings...",
@@ -25,17 +28,26 @@ document.getElementById("showHoroscope").addEventListener("click", function () {
         "Scanning your ex's OnlyFans..."
     ];
 
-    let i = 0;
-    function showNextMessage() {
-        if (i < messages.length) {
-            document.getElementById("loadingText").innerText = messages[i++];
-            setTimeout(showNextMessage, 3000);
+    let progress = 0;
+    let messageIndex = 0;
+    
+    function updateLoading() {
+        if (progress < 100) {
+            progress++;
+            loadingBar.style.width = progress + "%";
+
+            if (progress % 10 === 0 && messageIndex < messages.length) {
+                loadingText.innerText = messages[messageIndex++];
+            }
+
+            setTimeout(updateLoading, 300);
         } else {
             document.getElementById("loadingPopup").style.display = "none";
             document.getElementById("finalPopup").style.display = "block";
         }
     }
-    showNextMessage();
+
+    updateLoading();
 });
 
 function getZodiacSign(date) {
