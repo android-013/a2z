@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { letter: "E", name: "Enigma Machine", link: "e/index.html" },
         { letter: "F", name: "Five Way (Star trek) RPS", link: "https://android-013.github.io/5-way-rps/" },
         { letter: "G", name: "Google Sheet Viewer", link: "https://android-013.github.io/sheet/" },
-        { letter: "H", name: "Horoscope Finder", link: "h/h.html" },
+        { letter: "H", name: "Horoscope Finder", link: "h/index.html" },
         //{ letter: "I", name: "Image Gallery", link: "image-gallery.html" },
         //{ letter: "J", name: "JavaScript Calculator", link: "calculator.html" },
         //{ letter: "K", name: "Keyboard Event Tester", link: "keyboard-tester.html" },
