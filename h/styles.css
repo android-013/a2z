@@ -1,6 +1,8 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-size: cover;
+    background-attachment: fixed;
     color: #ffffff;
     text-align: center;
     padding: 50px;
